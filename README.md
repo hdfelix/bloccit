@@ -1,7 +1,12 @@
 == README
 
 ## Bloccit: a Reddit clone to teach the fundamentals of web development and Rails 4.
-
-#Made with my mentor at [Bloc](http://bloc.io).
+   
+First bloc.io project
+   
+Production DB: PosgreSQL; Development DB: sqlite
+   
+###asset-pipeline
+* Added rails-12factor gem
 
 
