@@ -8,5 +8,8 @@ Production DB: PosgreSQL; Development DB: sqlite
    
 ###asset-pipeline
 * Added rails-12factor gem
+   
+Heroku: hdfelix-bloccit.herokuapp.com
+
 
 
