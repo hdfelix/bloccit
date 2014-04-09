@@ -40,7 +40,10 @@ end
 
 #server static assets, better errors
 gem 'rails_12factor', group: :production
-gem 'sprockets_better_errors'
+#gem 'sprockets_better_errors'
+
+#CSS Framework
+gem 'bootstrap-sass', '~> 3.1.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
