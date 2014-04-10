@@ -44,6 +44,10 @@ gem 'rails_12factor', group: :production
 
 #CSS Framework
 gem 'bootstrap-sass', '~> 3.1.1'
+
+#Creating test data
+gem 'faker'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
