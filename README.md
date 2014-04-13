@@ -11,5 +11,8 @@ Production DB: PosgreSQL; Development DB: sqlite
    
 Heroku: hdfelix-bloccit.herokuapp.com
 
+##Setup
+* Envorionment variables can be placed in /config/application.yml. See config/application.example.yml to see the format for environment variables.
+
 
 
