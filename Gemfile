@@ -36,6 +36,9 @@ gem 'figaro'
 #Authorization
 gem 'pundit'
 
+#Cloud service library
+gem 'fog'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -53,6 +56,10 @@ gem 'faker'
 
 #Markdown
 gem 'redcarpet'
+
+#Image manipulation
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
