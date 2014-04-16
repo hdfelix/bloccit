@@ -22,8 +22,8 @@ class TopicsController < ApplicationController
 
   def show
 		@topic = Topic.find(params[:id])
-		authorize @topic   #not in lesson...
 		@posts = @topic.posts
+		#authorize @topic   #not in lesson...
   end
 
   def edit
@@ -44,6 +44,6 @@ class TopicsController < ApplicationController
 
 	private
 	def topic_params
-		params.require(:topic).permit(:name, :descrition, :public)
+		params.require(:topic).permit(:name, :description, :public)
 	end
 end
