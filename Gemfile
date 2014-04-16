@@ -51,6 +51,9 @@ gem 'bootstrap-sass', '~> 3.1.1'
 #Creating test data
 gem 'faker'
 
+#Markdown
+gem 'redcarpet'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
