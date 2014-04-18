@@ -16,26 +16,20 @@
 			<%= @post.user.name %>
 		</small>
 	</div>
+	<br />
 	<div class="col-md-4">
-		<% if policy(@post).edit? %>
-			<br />
-			<%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
+		<% if policy(@post).edit? %> <br /> <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
 		<% end %>
+		<% if policy(@post).destroy? %>
+			<%= link_to "Delete Post", [@topic, @post], method: :delete, class: 'btn btn-danger', confirm: 'Are you sure you want to delete this post?' %>
+		 <% end %>
 	</div>
 </div>
-<br />
-<hr />
+<br /> <hr />
 <div class="row">
 	<div class="col-md-8">
 		<h4>Comments</h4>
-		<% @comments.each do |comment| %>
-			<div class="media">
-				<h5 class="media-heading"><%= comment.user.name %></h5>
-				<div class="media-body">
-					<%= comment.body %>
-				</div>
-			</div>
-		<% end %>
+			<%= render partial: 'comments/comment', collection: @comments %>
 	</div>
 </div>
 <hr />
