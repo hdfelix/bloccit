@@ -35,6 +35,16 @@ require 'faker'
 	#set the created_at to a time within the past year
 	post.update_attribute(:created_at, Time.now - rand(600..31536000))
 
+	#Create Comments on posts
+	body_text = Faker::Lorem.sentence
+	rand(3..6).times do
+		rand(1..3).times {body_text << Faker::Lorem.sentence}
+		user.comments.create(
+			body: body_text,
+			post: post
+		)	
+	end
+
 	topics.rotate!
 	end
 end
@@ -42,7 +52,7 @@ end
 #Create an admin user
 admin = User.new(
 	name: 'Admin User',
-	email: 'admin@example.com', 
+	email: 'hdfelix@gmail.com',
 	password: 'chiracha',
 	password_confirmation: 'chiracha')
 admin.skip_confirmation!
@@ -52,7 +62,8 @@ admin.update_attribute(:role, 'admin')
 #Create a moderator
 moderator = User.new(
 	name: 'Moderator',
-	email: 'moderator@example.com', 
+	email: 'hdfnet@gmail.com',
+
 	password: 'chiracha',
 	password_confirmation: 'chiracha')
 moderator.skip_confirmation!
@@ -62,7 +73,7 @@ moderator.update_attribute(:role, 'moderator')
 #Create a member
 member = User.new(
 	name: 'Member',
-	email: 'member@example.com', 
+	email: 'hector.felix@bfa.org',
 	password: 'chiracha',
 	password_confirmation: 'chiracha')
 member.skip_confirmation!

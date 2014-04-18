@@ -1,0 +1,7 @@
+<%= form_for [topic,post,comment] do |f| %>
+	<div class="form-group">
+		<%= label_tag(:body, "Add a comment") %>
+		<%= f.text_area :body, class: 'form-control', placeholder: "Enter a comment" %>
+	</div>
+	<%= f.submit "Save", class: 'btn btn-success' %>
+<% end %>
