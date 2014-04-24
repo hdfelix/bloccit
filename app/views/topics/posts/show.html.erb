@@ -36,7 +36,7 @@
 <br /> <hr />
 <div class="row">
 	<div class="col-md-8">
-		<h4>Comments</h4>
+		<h4 class='js-comments-count'><%= @comments.count %> Comments</h4>
 			<%= render partial: 'comments/comment', collection: @comments %>
 	</div>
 </div>
