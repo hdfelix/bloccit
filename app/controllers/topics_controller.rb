@@ -4,6 +4,12 @@ class TopicsController < ApplicationController
 		authorize @topics
   end
 
+  def show
+		@topic = Topic.find(params[:id])
+		authorize(@topic)
+		@posts = @topic.posts.includes(:user).includes(:comments).paginate(page: params[:page], per_page: 5)
+  end
+
   def new
 		@topic = Topic.new
 		authorize @topic
@@ -19,12 +25,6 @@ class TopicsController < ApplicationController
 			render :new
 		end
 	end
-
-  def show
-		@topic = Topic.find(params[:id])
-		authorize(@topic)
-		@posts = @topic.posts.paginate(page: params[:page], per_page: 5)
-  end
 
   def edit
 		@topic = Topic.find(params[:id])
