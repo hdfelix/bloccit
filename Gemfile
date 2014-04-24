@@ -67,6 +67,7 @@ gem 'mini_magick'
 group :development, :test do
 	gem 'rspec-rails', '~> 2.14.1'
 	gem 'factory_girl_rails', '~>4.0'
+	gem 'database_cleaner'
 end
 
 # Use ActiveModel has_secure_password
