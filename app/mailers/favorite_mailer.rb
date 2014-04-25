@@ -1,5 +1,5 @@
 class FavoriteMailer < ActionMailer::Base
-	default from: "hdfelix@yahoo.com"
+	default from: "hector.felix@bfa.org"
 
 	def new_comment(user, post, comment)
 		@user = user
