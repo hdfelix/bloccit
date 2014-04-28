@@ -16,13 +16,13 @@ class CommentsController < ApplicationController
 		@new_comment = Comment.new
 		
 		authorize @comment
-		
+
 		if @comment.save
 			flash[:notice] = "Comment from successfully added."
 		else
 			flash[:error] = "We could not save your comment."
 		end
-		
+
 		respond_with(@comment) do |f|
 			f.html {redirect_to [@topic, @post] }
 		end
