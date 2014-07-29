@@ -1,4 +1,4 @@
-== README
+[ ![Codeship Status for hdfelix/bloccit](https://www.codeship.io/projects/bb1f4520-f99c-0131-5a84-6a22440fbafa/status)](https://www.codeship.io/projects/28914)
 
 ## Bloccit: a Reddit clone to teach the fundamentals of web development and Rails 4.
    
