@@ -20,3 +20,6 @@
 
 #Carierwave images
 public/uploads
+
+#rbenv?
+.ruby_version
